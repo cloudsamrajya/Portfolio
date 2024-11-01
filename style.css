@@ -8,7 +8,7 @@
 
 .navbar
 {
-    background-color: pink;
+    background-color: black;
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -23,17 +23,22 @@
     z-index: 1;
 }
 .navlinks{
+    
     padding: 30px;
+    
 }
 .link{
     list-style: none ;
     display: flex;
     gap: 100px;
+    margin-right: 30px;
+    
+    
    
 }
 .link a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 .profilecard{
     /* background-color: yellow; */
@@ -260,6 +265,7 @@ animation-delay: 0s;
         display: none;
     }
     .menu-icon{
+        color: white;
         margin-right: 30px;
         font-size: 30px;
         cursor: pointer;
@@ -272,7 +278,8 @@ animation-delay: 0s;
     top: 100px;
     width: 100%;
     text-align: center;
-    background-color: pink;
+    background-color: lightgreen;
+    padding: 30px;
 }
 .nav-links.show ul{
     flex-direction: column;
@@ -298,3 +305,22 @@ animation-delay: 0s;
         width: 80%;
     }
 }
+.footer{
+    display: flex;
+    justify-content: space-around;
+    height: 35px;
+    background-color: black;
+    padding: 5px;
+}
+.footer a{
+    
+    text-decoration: none;
+    color: white;
+   
+
+}
+.icon{
+    font-size: 25px;
+}
+
+
