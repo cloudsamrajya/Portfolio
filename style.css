@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.navbar
+{
+    background-color: pink;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    padding: 5px;
+    /* min-width: 700px; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.navlinks{
+    padding: 30px;
+}
+.link{
+    list-style: none ;
+    display: flex;
+    gap: 100px;
+   
+}
+.link a {
+    text-decoration: none;
+    color: black;
+}
+.profilecard{
+    /* background-color: yellow; */
+    margin-top: 10px;
+    border: 1px solid black;
+    height: 480px;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    scroll-margin-top: 140px;
+   
+
+
+    
+}
+.pp{
+    margin-top: 20px;
+}
+
+.pp img{
+    
+    border: 3px solid purple;
+    height: 7rem;
+    border-radius: 30px;
+    
+    
+
+}
+.info{
+    /* background-color: yellow; */
+    margin-bottom: 20px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+.info p {
+    padding: 20px;
+}
+.description{
+    /* background-color: yellow; */
+    /* height: 25vh; */
+    width: 100%;
+    margin-top: 640px;
+    /* background-color: red; */
+    margin-bottom: 10px;
+    
+
+    /* position: relative; */
+    
+}
+#para1{
+    padding: 40px;
+    line-height: 30px;
+   
+}
+.MyWorks{
+    /* border: 1px solid black; */
+    width: 90%;
+    max-width: 1536px;
+    margin-inline: auto;
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    mask-image: linear-gradient(to right,
+    rgba(0,0,0,0),
+    rgba(0,0,0,1) 20%,
+    rgba(0,0,0,1) 80%,
+    rgba(0,0,0,0)
+    );
+}
+@keyframes scrollleft{
+    to{
+        left: -400px;
+    }
+    }
+.item{
+    position: absolute;
+    left: max(calc(200px * 6), 100%);
+    animation-name: scrollleft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+
+}
+.item img{
+    width: 300px;
+    height: 300px;
+    border-radius: 6px;
+    border: 3px solid white;
+    
+    
+    
+}
+.item1 {
+     animation-delay: -25s;   /*I wanted to use calc but calc is not working in edge with negative so solving directly calc(30s/6 *(6-1)*-1)*/
+}
+.item2 {
+animation-delay: -20s;
+}
+.item3 {
+animation-delay: -15s;
+}
+.item4 {
+animation-delay: -10s;
+}
+.item5 {
+animation-delay: -5s;
+}
+.item6 {
+animation-delay: 0s;
+}
+
+.contact{
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    margin-top: 30px;
+    padding: 30px;
+}
+.txt1{
+    border: none;
+    border-bottom: 1px solid black;
+    width: 400px;
+    outline: none;
+    padding-top: 30px;
+    font-size: 1rem;
+    margin-left: 60px;    
+}
+.txt2{
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    padding-top: 30px;
+    width: 400px;
+    margin-left: 30px; 
+    font-size: 1rem;
+   
+}
+#send{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 20px;
+    margin-left: 30px;
+    border-radius: 10px;
+
+
+}
+.about{
+    /* border: 1px solid black; */
+    padding: 30px 235px;
+    line-height: 20px;
+}
+
+.footer{
+    position: relative ;
+    bottom: 0;
+    left: 0;
+    text-align: center ;
+}
+
+
+@media only screen and (max-width: 811px) {
+    .about  {
+        padding: 30px 100px;
+        width: 100%;
+        height: auto;
+      /* margin: auto; */
+      line-height: 20px;
+    }
+} 
+@media only screen and (max-width:676px){
+    #send{
+        margin-top: 30px;
+        width: 90%;
+        font-size: 1rem;
+    }
+}
+@media(max-width: 895px){
+    .nav-links{
+        margin-right: 30px;
+    }
+    .description{
+        margin-top: 690px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    #para1{
+        line-height: 20px;
+        
+    }
+}
+
+@media (max-width: 700px){
+    .link{
+        gap: 50px;
+        margin-right: 30px;
+    }
+}
+#projects{
+    scroll-margin-top: 105px;
+
+}
+
+
+@media(max-width:700px){
+    .nav-links{    /*Since the nav-link here is parent so when I make it display
+            none it moves to right but when I make the link which is it child class
+        so it give a space when i make it none*/
+        display: none;
+    }
+    .menu-icon{
+        margin-right: 30px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+}
+.nav-links.show{
+    display:block;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    text-align: center;
+    background-color: pink;
+}
+.nav-links.show ul{
+    flex-direction: column;
+    gap: 5px;
+}
+@media(min-width:700px){
+    .menu-icon{
+        display: none;
+    }
+}
+@media(max-width:571px){
+    
+    .txt1,.txt2{
+        width: 60%;
+    }
+    #send{
+        width: 90%;
+
+    }
+}
+@media(max-width:425px){
+    .profilecard{
+        width: 80%;
+    }
+}
